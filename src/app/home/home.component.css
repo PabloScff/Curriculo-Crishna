@@ -1,0 +1,478 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+.container {
+    background-color: bisque;
+}
+
+
+.header {
+  background: #000000;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  width: 100%;
+  height: 10rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.navMenu {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 35%;
+  transition: 2s;
+}
+a {
+  color: red; /* Cor vermelha para o texto do link */
+  background-color: transparent;
+  border-bottom: transparent border 3px;
+  text-decoration: none;
+  font-size: 1.4em;
+  text-transform: uppercase;
+  padding: 10px;
+  margin-left: 2%;
+  margin-right: 2%;
+  width: 10em;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  transition: 1s;
+}
+
+a:hover {
+  color: green; /* Cor verde no hover */
+  border-bottom: #fff 3px bold;
+  font-size: 23px;
+  transition: 1s;
+  background-color: transparent;
+}
+
+
+
+.logo {
+  width: 20%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+
+
+
+
+@media (max-width: 1185px) {
+  .navMenu {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 65%;
+    transition: 2s;
+  }
+}
+
+@media (max-width: 835px) {
+  .navMenu {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 85%;
+    transition: 2s;
+  }
+}
+
+/* FIM DA HEADER */
+
+
+
+
+.foto {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+  border-radius: 50%;
+}
+
+.fotoo {
+  width: 22em;
+  height: 22em;
+  border: 3px black;
+  border-style: solid;
+  border-radius: 50%;
+  /* border-color: linear-gradient(90deg, rgba(48,29,0,1) 0%, rgba(255,141,0,1) 38%); */
+}
+
+
+.envolta{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 30rem;
+  
+}
+
+/* From Uiverse.io by Nawsome */ 
+.boxes {
+  --size: 32px;
+  --duration: 800ms;
+  height: calc(var(--size) * 2);
+  width: calc(var(--size) * 3);
+  position: relative;
+  transform-style: preserve-3d;
+  transform-origin: 50% 50%;
+  margin-top: calc(var(--size) * 1.5 * -1);
+  transform: rotateX(60deg) rotateZ(45deg) rotateY(0deg) translateZ(0px);
+  
+}
+
+.boxes .box {
+  width: var(--size);
+  height: var(--size);
+  top: 0;
+  left: 0;
+  position: absolute;
+  transform-style: preserve-3d;
+  
+}
+
+.boxes .box:nth-child(1) {
+  transform: translate(100%, 0);
+  -webkit-animation: box1 var(--duration) linear infinite;
+  animation: box1 var(--duration) linear infinite;
+  
+}
+
+.boxes .box:nth-child(2) {
+  transform: translate(0, 100%);
+  -webkit-animation: box2 var(--duration) linear infinite;
+  animation: box2 var(--duration) linear infinite;
+}
+
+.boxes .box:nth-child(3) {
+  transform: translate(100%, 100%);
+  -webkit-animation: box3 var(--duration) linear infinite;
+  animation: box3 var(--duration) linear infinite;
+}
+
+.boxes .box:nth-child(4) {
+  transform: translate(200%, 0);
+  -webkit-animation: box4 var(--duration) linear infinite;
+  animation: box4 var(--duration) linear infinite;
+}
+
+.boxes .box > nav {
+  --background: black;
+  --top: auto;
+  --right: auto;
+  --bottom: auto;
+  --left: auto;
+  --translateZ: calc(var(--size) / 2);
+  --rotateY: 0deg;
+  --rotateX: 0deg;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--background);
+  top: var(--top);
+  right: var(--right);
+  bottom: var(--bottom);
+  left: var(--left);
+  transform: rotateY(var(--rotateY)) rotateX(var(--rotateX)) translateZ(var(--translateZ));
+}
+
+.boxes .box > nav:nth-child(1) {
+  --top: 0;
+  --left: 0;
+}
+
+.boxes .box > nav:nth-child(2) {
+  --background: black;
+  --right: 0;
+  --rotateY: 90deg;
+}
+
+.boxes .box > nav:nth-child(3) {
+  --background: black;
+  --rotateX: -90deg;
+}
+
+.boxes .box > nav:nth-child(4) {
+  --background: #505050;
+  --top: 0;
+  --left: 0;
+  --translateZ: calc(var(--size) * 3 * -1);
+}
+
+@-webkit-keyframes box1 {
+  0%, 50% {
+    transform: translate(100%, 0);
+  }
+
+  100% {
+    transform: translate(200%, 0);
+  }
+}
+
+@keyframes box1 {
+  0%, 50% {
+    transform: translate(100%, 0);
+  }
+
+  100% {
+    transform: translate(200%, 0);
+  }
+}
+
+@-webkit-keyframes box2 {
+  0% {
+    transform: translate(0, 100%);
+  }
+
+  50% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(100%, 0);
+  }
+}
+
+@keyframes box2 {
+  0% {
+    transform: translate(0, 100%);
+  }
+
+  50% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(100%, 0);
+  }
+}
+
+@-webkit-keyframes box3 {
+  0%, 50% {
+    transform: translate(100%, 100%);
+  }
+
+  100% {
+    transform: translate(0, 100%);
+  }
+}
+
+@keyframes box3 {
+  0%, 50% {
+    transform: translate(100%, 100%);
+  }
+
+  100% {
+    transform: translate(0, 100%);
+  }
+}
+
+@-webkit-keyframes box4 {
+  0% {
+    transform: translate(200%, 0);
+  }
+
+  50% {
+    transform: translate(200%, 100%);
+  }
+
+  100% {
+    transform: translate(100%, 100%);
+  }
+}
+
+@keyframes box4 {
+  0% {
+    transform: translate(200%, 0);
+  }
+
+  50% {
+    transform: translate(200%, 100%);
+  }
+
+  100% {
+    transform: translate(100%, 100%);
+  }
+}
+
+
+/* TERMINO area da fotooo */
+
+
+.texto {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.escrita {
+  width: 65%;
+  font-weight: bold;
+  font-size: 1.3rem;
+  text-align: justify;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
+}
+.expectativas {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.alinhar {
+  display: flex;
+  text-align: justify;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ .footer {
+  z-index: 1;
+  --footer-background:#ED5565;
+  display: grid;
+  position: relative;
+  grid-area: footer;
+  min-height: 12rem;
+  margin-top: 12%;
+  
+}
+ .footer .bubbles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1rem;
+  background: #000000;
+  filter: url("#blob");
+  width: 90%;
+}
+ .footer .bubbles .bubble {
+  position: absolute;
+  left: var(--position, 50%);
+  background: #434343;
+  border-radius: 100%;
+  -webkit-animation: bubble-size var(--time, 2s) ease-in infinite var(--delay, 0s), bubble-move var(--time, 2s) ease-in infinite var(--delay, 0s);
+          animation: bubble-size var(--time, 2s) ease-in infinite var(--delay, 0s), bubble-move var(--time, 2s) ease-in infinite var(--delay, 0s);
+  transform: translate(-50%, 100%);
+}
+ .footer .content {
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-gap: 4rem;
+  padding: 2rem;
+  background: linear-gradient(to top, #000000, #434343);
+}
+ .footer .content a,  .footer .content p {
+  color: #F5F7FA;
+  text-decoration: none;
+}
+ .footer .content b {
+  color: white;
+}
+ .footer .content p {
+  margin: 0;
+  font-size: 0.75rem;
+}
+ .footer .content > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+ .footer .content > div > div {
+  margin: 0.25rem 0;
+}
+ .footer .content > div > div > * {
+  margin-right: 0.5rem;
+}
+ .footer .content > div .image {
+  align-self: center;
+  width: 4rem;
+  height: 4rem;
+  margin: 0.25rem 0;
+  background-size: cover;
+  background-position: center;
+}
+
+@-webkit-keyframes bubble-size {
+  0%, 75% {
+    width: var(--size, 4rem);
+    height: var(--size, 4rem);
+  }
+  100% {
+    width: 0rem;
+    height: 0rem;
+  }
+}
+
+@keyframes bubble-size {
+  0%, 75% {
+    width: var(--size, 4rem);
+    height: var(--size, 4rem);
+  }
+  100% {
+    width: 0rem;
+    height: 0rem;
+  }
+}
+@-webkit-keyframes bubble-move {
+  0% {
+    bottom: -4rem;
+  }
+  100% {
+    bottom: var(--distance, 10rem);
+  }
+}
+@keyframes bubble-move {
+  0% {
+    bottom: -4rem;
+  }
+  100% {
+    bottom: var(--distance, 10rem);
+  }
+}
+.heading {
+  text-align: center;
+}
